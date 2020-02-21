@@ -10,7 +10,7 @@ before_install:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - openssl aes-256-cbc -K $encrypted_f8ed7b1a519d_key -iv $encrypted_f8ed7b1a519d_iv -in complexk8s-268904-a17f325118f9.json.enc -out complexk8s-268904-a17f325118f9.json -d
-  - gcloud auth activate-service-account --key-file server-account.json
+  - gcloud auth activate-service-account --key-file complexk8s-268904-a17f325118f9.json
   - gcloud config set project complexk8s-268904
   - gcloud config set compute/zone asia-east1-a
   - gcloud container clusters get-credentials complexk8s
