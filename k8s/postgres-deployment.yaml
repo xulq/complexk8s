@@ -29,6 +29,9 @@ spec:
                   key: PGPASSWORD
             - name: POSTGRES_HOST_AUTH_METHOD
               value: trust
+          env:
+            - name: PGDATA
+              value: /var/lib/postgresql/data/db-files/
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
