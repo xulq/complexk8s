@@ -3,7 +3,7 @@ kind: Certificate
 metadata:
   name: k8s-multi-com-tls
 spec:
-  secertName: k8s-multi-com
+  secretName: k8s-multi-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
