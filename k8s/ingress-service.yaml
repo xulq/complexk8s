@@ -9,13 +9,13 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
 spec:
   tls:
-    - hosts:
-        - kubectlapply.com
-        - www.kubectlapply.com
-      secretName: k8s-multi-com
+  - hosts:
+      - kubectlapply.com
+      - www.kubectlapply.com
+    secretName: k8s-multi-com
   rules:
     - host: kubectlapply.com
-    - http:
+      http:
         paths:
           - path: /?(.*)
             backend:
@@ -26,7 +26,7 @@ spec:
               serviceName: server-cluster-ip-service
               servicePort: 5000
     - host: www.kubectlapply.com
-    - http:
+      http:
         paths:
           - path: /?(.*)
             backend:
